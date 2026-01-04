@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2 class="logo">Portfolio</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Illustration Avatar" class="profile-img">
+        <h1>Hi, I'm <span>Sabir</span></h1>
+        <p class="typing">I work with <span id="skills"></span></p>
+        <button onclick="scrollToSection('contact')">Hire Me</button>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+    I am an enthusiastic Web Developer who loves turning ideas into interactive and visually appealing websites.
+    With hands-on experience in HTML, CSS, and JavaScript, I focus on creating responsive designs and smooth user experiences.
+    I enjoy experimenting with modern UI trends and continuously improving my skills by working on real-world projects.
+    My goal is to grow as a developer while building meaningful and impactful web solutions.
+    </p>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">Stopwatch App</div>
+        <div class="card">Calculator</div>
+        <div class="card">Portfolio Website</div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Email: sabirshaikh@gmail.com</p>
+    <p>Phone: +91 12345 67890</p>
+</section>
+
+<footer>
+    <p>© 2025 My Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
