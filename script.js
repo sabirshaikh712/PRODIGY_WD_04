@@ -30,30 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const skills = ["HTML", "CSS", "JavaScript", "Python"];
     let skillIndex = 0;
     let charIndex = 0;
-    let isDeleting = false;
-    const typingElement = document.getElementById("skills");
+    let deleting = false;
+    const skillSpan = document.getElementById("skills");
 
     function typeEffect() {
-        const skill = skills[skillIndex];
+        const currentSkill = skills[skillIndex];
 
-        if (!isDeleting) {
-            typingElement.textContent = skill.slice(0, charIndex + 1);
+        if (!deleting) {
+            skillSpan.textContent = currentSkill.slice(0, charIndex + 1);
             charIndex++;
-
-            if (charIndex === skill.length) {
-                setTimeout(() => isDeleting = true, 1000);
+            if (charIndex === currentSkill.length) {
+                setTimeout(() => deleting = true, 1000);
             }
         } else {
-            typingElement.textContent = skill.slice(0, charIndex - 1);
+            skillSpan.textContent = currentSkill.slice(0, charIndex - 1);
             charIndex--;
-
             if (charIndex === 0) {
-                isDeleting = false;
+                deleting = false;
                 skillIndex = (skillIndex + 1) % skills.length;
             }
         }
-
-        setTimeout(typeEffect, isDeleting ? 80 : 120);
+        setTimeout(typeEffect, deleting ? 80 : 120);
     }
 
     typeEffect();
