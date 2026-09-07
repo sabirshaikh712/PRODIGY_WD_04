@@ -1,50 +1,74 @@
-# PRODIGY_WD_04
-Web Development Task 4 – Prodigy Infotech Internship.
-# Personal Portfolio Website 🌐
+# Sabir Shaikh — Portfolio
 
-A modern, responsive personal portfolio website built using **HTML, CSS, and JavaScript**.  
-This project showcases my skills, projects, and contact information with a clean UI, smooth animations, and interactive elements.
+A modern personal portfolio focused on **Data Analytics** and **Web Development**. The site highlights my current technical toolkit and selected projects from GitHub.
 
-🔗 **Live Demo:**  
-https://sabirshaikh712.github.io/PRODIGY_WD_04/
+## About
 
----
+I’m a B.Sc. Computer Science student interested in programming, data analytics, databases and building useful web experiences.
 
-## 📌 Project Overview
+## Skills
 
-This portfolio website is designed to present a professional online presence.  
-It includes a visually appealing landing section, smooth scrolling navigation, animated typing effects, and responsive layouts to ensure a seamless user experience across all devices.
+### Programming
+- Java
+- C
+- C++
+- Python
+- JavaScript
 
-The project focuses on clean design principles, modern styling, and simple yet effective JavaScript functionality.
+### Data & Analytics
+- Power BI
+- DAX
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
 
----
+### Web Development
+- HTML
+- CSS
+- JavaScript
 
-## ✨ Features
+### Database & Computer Science
+- SQL
+- DBMS
+- DSA
 
-- Responsive design for desktop, tablet, and mobile devices  
-- Smooth scrolling navigation  
-- Animated typing effect showcasing skills  
-- Interactive navigation bar with active link highlighting  
-- Modern UI with gradient background and glassmorphism elements  
-- Clean and structured codebase  
+## Featured Projects
 
----
+### Data Analytics
+- [Netflix Content Analytics Dashboard](https://github.com/sabirshaikh712/Netflix-Content-Analytics-Dashboard) — Power BI and DAX dashboard for Netflix content analysis.
+- [Spotify Streaming Analytics Dashboard](https://github.com/sabirshaikh712/Spotify-streaming-analytics-dashboard) — Power BI dashboard exploring streaming patterns and performance.
+- [Walmart Sales Analytics Dashboard](https://github.com/sabirshaikh712/Walmart-Sales-Analytics-Dashboard) — retail sales analytics dashboard using Power BI and Python.
+- [Superstore Sales EDA](https://github.com/sabirshaikh712/EDA-Superstore-Sales-Analysis) — exploratory analysis using Python, Pandas, NumPy, Matplotlib and Seaborn.
 
-## 🛠️ Technologies Used
+### Web Development
+- [Tic-Tac-Toe Game](https://github.com/sabirshaikh712/Tic-Tac-Toe-Game)
+- [Stopwatch Web App](https://github.com/sabirshaikh712/Stopwatch-Web-App)
+- [Responsive Landing Page](https://github.com/sabirshaikh712/Responsive-Landing-Page)
 
-- **HTML5** – Structure and content  
-- **CSS3** – Styling, layout, animations, and responsiveness  
-- **JavaScript** – Interactivity and dynamic effects  
+## Tech Used for This Portfolio
 
----
+- HTML5
+- CSS3
+- JavaScript
+- Responsive design
+- CSS animations and interactive UI
 
-## 📂 Project Structure
-PRODIGY_WD_04
+## Repository Structure
 
-│── index.html
-
-│── style.css
-
-│── script.js
-
+```text
+Portfolio-Website/
+├── index.html
+├── style.css
+├── script.js
 └── README.md
+```
+
+## Connect
+
+- [GitHub](https://github.com/sabirshaikh712)
+- [LinkedIn](https://www.linkedin.com/in/sabir-shaikh-998352399/)
+
+---
+
+Built with HTML, CSS and JavaScript by **Sabir Shaikh**.
