@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const mobileCss = document.createElement("link");
+  mobileCss.rel = "stylesheet";
+  mobileCss.href = "mobile.css?v=1";
+  document.head.appendChild(mobileCss);
+
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
@@ -17,5 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.querySelector(".back-to-top");
   if (backToTop) backToTop.addEventListener("click", event => { event.preventDefault(); document.getElementById("home")?.scrollIntoView({ behavior: "smooth", block: "start" }); history.replaceState(null, "", "#home"); });
   const glow = document.querySelector(".cursor-glow");
-  window.addEventListener("pointermove", event => { if (glow) { glow.style.left = `${event.clientX}px`; glow.style.top = `${event.clientY}px`; } }, { passive: true });
+  window.addEventListener("pointermove", event => { if (glow && window.matchMedia("(hover: hover)").matches) { glow.style.left = `${event.clientX}px`; glow.style.top = `${event.clientY}px`; } }, { passive: true });
 });
