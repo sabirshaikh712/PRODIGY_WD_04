@@ -1,61 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sabir Shaikh — Data Analytics and Web Development portfolio.">
+  <meta name="theme-color" content="#07111f">
+  <title>Sabir Shaikh | Data Analytics & Web Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#home" aria-label="Sabir Shaikh home"><span class="brand-mark">S</span><span>sabir<span class="brand-dot">.</span>dev</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <a class="nav-github" href="https://github.com/sabirshaikh712" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
+        <h1>I turn <span class="gradient-text">data & ideas</span> into useful digital experiences.</h1>
+        <p class="hero-text">I'm Sabir — a Computer Science student who enjoys data analytics, programming and building interactive web experiences.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my work <span>↓</span></a><a class="btn btn-secondary" href="https://github.com/sabirshaikh712" target="_blank" rel="noopener">View GitHub ↗</a></div>
+        <div class="hero-stack"><span>Java</span><span>Python</span><span>SQL</span><span>JavaScript</span></div>
+      </div>
+      <div class="hero-visual reveal delay-1" aria-label="Developer and data analytics visual">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="terminal-card">
+          <div class="terminal-top"><div class="terminal-dots"><i></i><i></i><i></i></div><span>sabir@portfolio:~</span></div>
+          <div class="terminal-body">
+            <p><span class="purple">$</span> whoami</p><p class="output">computer_science_student</p>
+            <p><span class="purple">$</span> focus</p><p class="output">data_analytics + web_development</p>
+            <p><span class="purple">$</span> skills --current</p>
+            <div class="mini-bars"><div><span>Programming</span><b style="--w:92%"></b></div><div><span>Data</span><b style="--w:84%"></b></div><div><span>Web</span><b style="--w:78%"></b></div></div>
+            <p class="cursor-line"><span class="purple">$</span> <span class="blink">_</span></p>
+          </div>
+        </div>
+        <div class="floating-chip chip-data">◈ DATA</div><div class="floating-chip chip-code">&lt;/&gt; CODE</div>
+      </div>
+    </section>
 
-<nav>
-    <h2 class="logo">Portfolio</h2>
-    <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <section class="section container" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">01 — ABOUT</p><h2>Curious by nature.<br><span class="muted">Builder by practice.</span></h2></div>
+      <div class="about-grid">
+        <div class="about-copy reveal"><p>I’m a B.Sc. Computer Science student interested in the intersection of programming, data and the web.</p><p>I like taking a problem, breaking it down, writing the code, exploring the data and turning the result into something people can use.</p></div>
+        <div class="about-stats reveal delay-1"><div class="stat-card"><strong>04</strong><span>Data projects</span></div><div class="stat-card"><strong>03</strong><span>Web projects</span></div><div class="stat-card"><strong>10+</strong><span>Core technologies</span></div><div class="stat-card"><strong>01</strong><span>Curious mind</span></div></div>
+      </div>
+    </section>
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Illustration Avatar" class="profile-img">
-        <h1>Hi, I'm <span>Sabir</span></h1>
-        <p class="typing">I work with <span id="skills"></span></p>
-        <button onclick="scrollToSection('contact')">Hire Me</button>
-    </div>
-</section>
+    <section class="section container" id="skills">
+      <div class="section-heading reveal"><p class="eyebrow">02 — SKILLS</p><h2>My current <span class="gradient-text">toolkit.</span></h2><p class="section-intro">Technologies and computer-science foundations I currently work with.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><span class="skill-number">01</span><h3>Programming</h3><div class="tags"><span>Java</span><span>C</span><span>C++</span><span>Python</span><span>JavaScript</span></div></article>
+        <article class="skill-card accent-card reveal delay-1"><span class="skill-number">02</span><h3>Data & Analytics</h3><div class="tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Power BI</span><span>DAX</span></div></article>
+        <article class="skill-card reveal delay-2"><span class="skill-number">03</span><h3>Web Development</h3><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+        <article class="skill-card reveal delay-3"><span class="skill-number">04</span><h3>Database & CS</h3><div class="tags"><span>SQL</span><span>DBMS</span><span>DSA</span></div></article>
+      </div>
+    </section>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate and detail-oriented Web Developer with a strong foundation in HTML, CSS, and JavaScript.
-        I enjoy building modern, responsive, and user-friendly web applications with clean design and smooth interactions.
-        I continuously improve my skills by working on real-world projects and exploring modern web technologies.
-    </p>
-</section>
+    <section class="section container" id="projects">
+      <div class="section-heading projects-heading reveal"><div><p class="eyebrow">03 — SELECTED WORK</p><h2>Things I've <span class="gradient-text">built.</span></h2><p class="section-intro">Real projects from my GitHub — with the actual project snapshots.</p></div><div class="filter-bar" role="group" aria-label="Project filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="data">Data</button><button class="filter" data-filter="web">Web</button></div></div>
+      <div class="project-grid">
+        <article class="project-card featured reveal" data-category="data"><a class="project-image" href="https://github.com/sabirshaikh712/Netflix-Content-Analytics-Dashboard" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/sabirshaikh712/Netflix-Content-Analytics-Dashboard/main/Netflix_Dashboard.jpg" alt="Netflix Content Analytics Dashboard snapshot" loading="lazy"><span class="image-badge">POWER BI · DAX</span></a><div class="project-content"><div class="project-meta"><span>DATA ANALYTICS</span><span>01</span></div><h3>Netflix Content Analytics Dashboard</h3><p>Interactive Power BI dashboard analyzing content distribution, ratings, countries, movies and TV shows with dynamic filters and KPI cards.</p><div class="project-tags"><span>Power BI</span><span>DAX</span><span>Data Viz</span></div><a class="project-link" href="https://github.com/sabirshaikh712/Netflix-Content-Analytics-Dashboard" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
+        <article class="project-card reveal delay-1" data-category="data"><a class="project-image" href="https://github.com/sabirshaikh712/Spotify-streaming-analytics-dashboard" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/sabirshaikh712/Spotify-streaming-analytics-dashboard/main/Spotify_Dashboard.png" alt="Spotify Streaming Analytics Dashboard snapshot" loading="lazy"><span class="image-badge">POWER BI · DATA</span></a><div class="project-content"><div class="project-meta"><span>DATA ANALYTICS</span><span>02</span></div><h3>Spotify Streaming Analytics Dashboard</h3><p>Power BI dashboard exploring streaming behavior, top tracks and artists, listening patterns and key performance metrics.</p><div class="project-tags"><span>Power BI</span><span>DAX</span><span>Analytics</span></div><a class="project-link" href="https://github.com/sabirshaikh712/Spotify-streaming-analytics-dashboard" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
+        <article class="project-card reveal" data-category="data"><a class="project-image" href="https://github.com/sabirshaikh712/Walmart-Sales-Analytics-Dashboard" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/sabirshaikh712/Walmart-Sales-Analytics-Dashboard/main/Dashboard/Thumbnail.jpg" alt="Walmart Sales Analytics Dashboard snapshot" loading="lazy"><span class="image-badge">POWER BI · PYTHON</span></a><div class="project-content"><div class="project-meta"><span>DATA ANALYTICS</span><span>03</span></div><h3>Walmart Sales Analytics Dashboard</h3><p>Interactive retail dashboard covering sales KPIs, store performance, seasonal trends, holiday impact and economic indicators.</p><div class="project-tags"><span>Power BI</span><span>Python</span><span>Pandas</span><span>NumPy</span></div><a class="project-link" href="https://github.com/sabirshaikh712/Walmart-Sales-Analytics-Dashboard" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
+        <article class="project-card reveal delay-1" data-category="data"><a class="project-image eda-snapshot" href="https://github.com/sabirshaikh712/EDA-Superstore-Sales-Analysis" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/sabirshaikh712/EDA-Superstore-Sales-Analysis/main/screenshots/EDA%20Superstore%20Sales.jpg" alt="Superstore Sales EDA dashboard snapshot" loading="lazy"><span class="image-badge">PYTHON · EDA</span></a><div class="project-content"><div class="project-meta"><span>DATA ANALYSIS</span><span>04</span></div><h3>Superstore Sales EDA</h3><p>Exploratory Data Analysis uncovering sales and profit trends, category and regional performance, seasonal patterns and business insights.</p><div class="project-tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span></div><a class="project-link" href="https://github.com/sabirshaikh712/EDA-Superstore-Sales-Analysis" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+        <article class="project-card reveal" data-category="web"><a class="project-image web-preview" href="https://github.com/sabirshaikh712/Tic-Tac-Toe-Game" target="_blank" rel="noopener"><div class="browser-preview"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div class="preview-game"><div class="tic-board"><span>×</span><span>○</span><span>×</span><span>○</span><span>×</span><span>○</span><span>○</span><span>×</span><span>×</span></div></div></div><span class="image-badge">HTML · CSS · JS</span></a><div class="project-content"><div class="project-meta"><span>WEB DEVELOPMENT</span><span>05</span></div><h3>Tic-Tac-Toe Game</h3><p>Interactive browser game with two-player and computer modes, difficulty levels, win detection and responsive UI.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/sabirshaikh712/Tic-Tac-Toe-Game" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+        <article class="project-card reveal delay-1" data-category="web"><a class="project-image web-preview" href="https://github.com/sabirshaikh712/Stopwatch-Web-App" target="_blank" rel="noopener"><div class="browser-preview"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div class="preview-stopwatch">00:42:18</div><div class="preview-controls"><i>Start</i><i>Stop</i><i>Reset</i></div></div><span class="image-badge">HTML · CSS · JS</span></a><div class="project-content"><div class="project-meta"><span>WEB DEVELOPMENT</span><span>06</span></div><h3>Stopwatch Web App</h3><p>Functional browser stopwatch with start, pause, reset, lap recording and real-time updates.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/sabirshaikh712/Stopwatch-Web-App" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+        <article class="project-card reveal delay-2" data-category="web"><a class="project-image web-preview" href="https://github.com/sabirshaikh712/Responsive-Landing-Page" target="_blank" rel="noopener"><div class="browser-preview"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div class="preview-landing"><strong>EXPLORE</strong><span>RESPONSIVE LANDING PAGE</span><b>DISCOVER MORE →</b></div></div><span class="image-badge">HTML · CSS · JS</span></a><div class="project-content"><div class="project-meta"><span>WEB DEVELOPMENT</span><span>07</span></div><h3>Responsive Landing Page</h3><p>Responsive website focused on clean UI, smooth scrolling, hover effects, layout and browser interaction.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/sabirshaikh712/Responsive-Landing-Page" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+      </div>
+    </section>
 
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="card">Stopwatch Web App</div>
-        <div class="card">Calculator</div>
-        <div class="card">Portfolio Website</div>
-    </div>
-</section>
+    <section class="section journey-section container" id="journey"><div class="section-heading reveal"><p class="eyebrow">04 — CURRENTLY</p><h2>Learning, building,<br><span class="muted">getting better.</span></h2></div><div class="journey-grid"><div class="journey-copy reveal"><p>I believe the best way to learn technology is to build with it. Every project is a chance to improve how I think, code and communicate.</p><div class="current-focus"><span class="pulse"></span><span>Building projects & strengthening my fundamentals</span></div></div><div class="timeline reveal delay-1"><div class="timeline-item"><span>01</span><div><strong>Programming foundations</strong><small>Java · C · C++ · Python · DSA</small></div></div><div class="timeline-item"><span>02</span><div><strong>Data & databases</strong><small>Python analytics · SQL · DBMS · Power BI</small></div></div><div class="timeline-item"><span>03</span><div><strong>Web development</strong><small>HTML · CSS · JavaScript</small></div></div></div></div></section>
 
-<section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Email: sabirshaikh@gmail.com</p>
-    <p>Phone: +91 12345 67890</p>
-</section>
-
-<footer>
-    <p>© 2025 Sabir Shaikh</p>
-</footer>
-
-<script src="script.js"></script>
+    <section class="contact container reveal" id="contact"><div class="contact-card"><p class="eyebrow">05 — CONTACT</p><h2>Let's build something<br><span class="gradient-text">interesting.</span></h2><p>Have an opportunity, project idea or just want to connect?</p><a class="btn btn-primary" href="https://www.linkedin.com/in/sabir-shaikh-998352399/" target="_blank" rel="noopener" aria-label="Get in touch with Sabir on LinkedIn">Get in touch ↗</a><div class="contact-links"><a href="https://github.com/sabirshaikh712" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/sabir-shaikh-998352399/" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
+  </main>
+  <footer class="footer container"><span>© 2026 Sabir Shaikh</span><a class="back-to-top" href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
