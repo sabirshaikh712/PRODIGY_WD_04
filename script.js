@@ -1,57 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    window.scrollToSection = function (id) {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    };
-
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
-
-    window.addEventListener("scroll", () => {
-        let current = "";
-
-        sections.forEach(section => {
-            const top = section.offsetTop - 120;
-            const height = section.clientHeight;
-
-            if (pageYOffset >= top && pageYOffset < top + height) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-                link.classList.add("active");
-            }
-        });
-    });
-
-    const skills = ["HTML", "CSS", "JavaScript", "Python"];
-    let skillIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-    const skillSpan = document.getElementById("skills");
-
-    function typeEffect() {
-        const currentSkill = skills[skillIndex];
-
-        if (!deleting) {
-            skillSpan.textContent = currentSkill.slice(0, charIndex + 1);
-            charIndex++;
-            if (charIndex === currentSkill.length) {
-                setTimeout(() => deleting = true, 1000);
-            }
-        } else {
-            skillSpan.textContent = currentSkill.slice(0, charIndex - 1);
-            charIndex--;
-            if (charIndex === 0) {
-                deleting = false;
-                skillIndex = (skillIndex + 1) % skills.length;
-            }
-        }
-        setTimeout(typeEffect, deleting ? 80 : 120);
-    }
-
-    typeEffect();
+  const header = document.querySelector(".site-header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  window.addEventListener("scroll", () => header?.classList.toggle("scrolled", window.scrollY > 20), { passive: true });
+  menuToggle?.addEventListener("click", () => { const open = navLinks?.classList.toggle("open"); menuToggle.setAttribute("aria-expanded", String(!!open)); });
+  navLinks?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => { navLinks.classList.remove("open"); menuToggle?.setAttribute("aria-expanded", "false"); }));
+  const sections = document.querySelectorAll("section[id]");
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) links.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`)); }), { rootMargin: "-35% 0px -55%" });
+  sections.forEach(section => observer.observe(section));
+  const filters = document.querySelectorAll(".filter");
+  const cards = document.querySelectorAll(".project-card");
+  filters.forEach(filter => filter.addEventListener("click", () => { filters.forEach(button => button.classList.remove("active")); filter.classList.add("active"); const value = filter.dataset.filter; cards.forEach(card => card.style.display = value === "all" || card.dataset.category === value ? "" : "none"); }));
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); } }), { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
+  const backToTop = document.querySelector(".back-to-top");
+  if (backToTop) backToTop.addEventListener("click", event => { event.preventDefault(); document.getElementById("home")?.scrollIntoView({ behavior: "smooth", block: "start" }); history.replaceState(null, "", "#home"); });
+  const glow = document.querySelector(".cursor-glow");
+  window.addEventListener("pointermove", event => { if (glow) { glow.style.left = `${event.clientX}px`; glow.style.top = `${event.clientY}px`; } }, { passive: true });
 });
