@@ -1,5 +1,6 @@
 /* Mobile-first polish for phones and small tablets */
-@media (max-width: 850px) {
+/* Also activates on touch devices when Chrome requests Desktop Site. */
+@media (max-width: 850px), (pointer: coarse) and (max-width: 1200px) {
   html { scroll-padding-top: 76px; }
   body { width: 100%; min-width: 0; overflow-x: hidden; }
   .container { width: min(100% - 32px, 720px); }
@@ -8,7 +9,8 @@
   .brand-mark { width: 31px; height: 31px; border-radius: 9px; }
   .menu-toggle { width: 42px; height: 42px; display: grid; place-content: center; padding: 7px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.03); cursor: pointer; }
   .menu-toggle span { width: 22px; height: 2px; margin: 3px 0; }
-  .nav-links { top: 62px; left: 16px; right: 16px; padding: 16px; gap: 4px; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+  .nav-links { display: none; position: absolute; top: 62px; left: 16px; right: 16px; padding: 16px; flex-direction: column; align-items: stretch; gap: 4px; background: #0b1728; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+  .nav-links.open { display: flex; }
   .nav-links a { padding: 11px 10px; font-size: 14px; border-radius: 8px; }
   .nav-links a:hover, .nav-links a.active { background: rgba(56,217,255,.06); }
   .nav-github { text-align: center; margin-top: 4px; }
